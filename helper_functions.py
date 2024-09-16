@@ -37,16 +37,16 @@ def plot_history_curves(history):
     plt.legend()
 
 
-    import zipfile
+import zipfile
 
-    def unzip_data(filename):
-        """
-        a function to unzip the data in the working directory.
+def unzip_data(filename):
+    """
+    a function to unzip the data in the working directory.
 
-        Args:
+    Args:
             filename(str): the name of the zip file that needs to be unzip
-        """
+    """
 
-        zip_ref = zipfile.ZipFile(filename, "r")
-        zip_ref.extractall()
-        zip_ref.close()
+    zip_ref = zipfile.ZipFile(filename, "r")
+    zip_ref.extractall()
+    zip_ref.close()
