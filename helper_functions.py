@@ -50,3 +50,23 @@ def unzip_data(filename):
     zip_ref = zipfile.ZipFile(filename, "r")
     zip_ref.extractall()
     zip_ref.close()
+
+
+import os
+
+def walk_through_dir(dir_path):
+    """
+    Walks through dir_path returning its contents
+
+    Args:
+        dirpath(str): the target directory
+    
+    Returns:
+        a print out of:
+            number of subdirectories in dir_path
+            number of images (files) in each subdirectory
+            name of each subdirectory
+    """
+
+    for dirpath, dirnames, filenames in os.walk(dir_path):
+        print(f"there are {len(dirnames)} directories and {len(filenames)} images in {dirpath}")
