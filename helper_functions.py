@@ -35,3 +35,18 @@ def plot_history_curves(history):
     plt.plot(epochs, val_accuracy, label="validation accuracy")
     plt.xlabel("epochs")
     plt.legend()
+
+
+    import zipfile
+
+    def unzip_data(filename):
+        """
+        a function to unzip the data in the working directory.
+
+        Args:
+            filename(str): the name of the zip file that needs to be unzip
+        """
+
+        zip_ref = zipfile.ZipFile(filename, "r")
+        zip_ref.extractall()
+        zip_ref.close()
